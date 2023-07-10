@@ -1,9 +1,8 @@
-
-def reverse(s):
-    res=""
-    for char in s:
-        res=char+res
-        return res
-    
-    print(reverse('Python is fun'))
+def rev(s):
+    str=""
+    for i in s:
+        str=i+str
+        return str
+    s="Python is fun"
+    print(rev(s))
    
