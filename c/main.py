@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,jsonify
 from flask_pymongo import Pymongo
 from bson.objectid import ObjectId
 app=Flask(__name__)
@@ -11,12 +11,16 @@ def getdata():
     data1=[]
     for data in datas:
         data["-id"]=str(data["_id"])
+        data.append(data)
+        return jsonify(data)
+
 
 @app.route("/add",methods=["POST"])
 def adddata():   
+    
 @app.route("/uddate/<id>",methods=["PUT"])
-def adddata():  
+def updateata():  
 @app.route("/delete/<id>",methods=["DELETE"])
-def adddata():         
+def deletedata():         
 if_name=="_main":
 app.run()
